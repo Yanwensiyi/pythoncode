@@ -23,7 +23,7 @@ class biliuser:
       pass
     return
   pass
-file = open("biliusers.txt","w")
+file = open("biliusers.txt","w",encoding="utf-8")
 for x in range(1,1001):
   i = biliuser(x)
   users.append(i)
@@ -32,6 +32,7 @@ for x in range(1,1001):
       continue
     print("UID:%s\nName:%s\nGender:%s\nSign:%s\nLevel:%s\nBirthday:%s\n\n"%(i.mid,i.name,i.sex,i.sign,i.level,i.birthday))
     file.write("UID:%s\nName:%s\nGender:%s\nSign:%s\nLevel:%s\nBirthday:%s\n\n"%(i.mid,i.name,i.sex,i.sign,i.level,i.birthday))
+    file.flush()
     pass
   except:
     pass
